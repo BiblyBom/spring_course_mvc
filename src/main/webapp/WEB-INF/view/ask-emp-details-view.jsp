@@ -4,10 +4,13 @@
 
 <h2>Dear guest, please enter your name in a form below</h2>
 
-<form action="/askDetails" method="get">
+<br>
+<br>
+
+<form action="showDetails" method="get">
     <input type="text" name="employeeName"
-           placeholder="Write your name"/>
-    <input type="Submit"/>
+           placeholder="Write your name here"/>
+    <input type="submit"/>
 
 </form>
 
