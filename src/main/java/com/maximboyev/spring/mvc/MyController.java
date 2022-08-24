@@ -2,6 +2,7 @@ package com.maximboyev.spring.mvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 
@@ -15,7 +16,8 @@ public class MyController {
     }
 
     @RequestMapping("/askDetails")
-    public String askEmployeeDetails() {
+    public String askEmployeeDetails(Model model) {
+        model.addAttribute("employee", new Employee());
         return "ask-emp-details-view";
     }
 
@@ -25,11 +27,8 @@ public class MyController {
 //    }
 
     @RequestMapping("/showDetails")
-    public String showEmployeeDetails(HttpServletRequest request, Model model)
+    public String showEmployeeDetails(@ModelAttribute("employee") Employee employee)
     {
-        String empName = request.getParameter("employeeName");
-        empName = "Mr. " + empName;
-        model.addAttribute("nameAttribute", empName);
         return "show-emp-details-view";
     }
 }
