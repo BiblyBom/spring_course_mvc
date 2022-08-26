@@ -20,8 +20,12 @@
     <form:option value="Information Technologies" label="IT"/>
     <form:option value="Human Resources" label="HR"/>
     <form:option value="Sales" label="Sales"/>
-
     </form:select>
+    <br><br>
+    Choose a loyalty program:
+    Seagull Way <form:radiobutton path="loyaltyProgram" value="Seagull Way"/>
+    Lunar Industries <form:radiobutton path="loyaltyProgram" value="Lunar Industries"/>
+    Night Wolf Incorporated <form:radiobutton path="loyaltyProgram" value="Night Wolf Incorporated"/>
     <br><br>
 
     <input type="submit" value="Ok">

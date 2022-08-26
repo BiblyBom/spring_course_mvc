@@ -6,6 +6,15 @@ public class Employee {
     private String surname;
     private int salary;
     private String department;
+    private String loyaltyProgram;
+
+    public String getLoyaltyProgram() {
+        return loyaltyProgram;
+    }
+
+    public void setLoyaltyProgram(String loyaltyProgram) {
+        this.loyaltyProgram = loyaltyProgram;
+    }
 
     public Employee() {
     }
