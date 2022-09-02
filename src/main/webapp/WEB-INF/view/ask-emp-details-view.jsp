@@ -27,6 +27,10 @@
     Lunar Industries <form:radiobutton path="loyaltyProgram" value="Lunar Industries"/>
     Night Wolf Incorporated <form:radiobutton path="loyaltyProgram" value="Night Wolf Incorporated"/>
     <br><br>
+    What languages do you speak?
+    <form:checkboxes path="languages" items="${employee.languageList}"/>
+    <br>
+
 
     <input type="submit" value="Ok">
 

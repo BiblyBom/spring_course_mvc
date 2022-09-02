@@ -1,5 +1,8 @@
 package com.maximboyev.spring.mvc;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Employee {
 
     private String name;
@@ -7,16 +10,14 @@ public class Employee {
     private int salary;
     private String department;
     private String loyaltyProgram;
-
-    public String getLoyaltyProgram() {
-        return loyaltyProgram;
-    }
-
-    public void setLoyaltyProgram(String loyaltyProgram) {
-        this.loyaltyProgram = loyaltyProgram;
-    }
+    private String[] languages;
+    private Map<String, String> languageList;
 
     public Employee() {
+        languageList = new HashMap<>();
+        languageList.put("English", "Eng");
+        languageList.put("German", "Ger");
+        languageList.put("French", "Fre");
     }
 
     public String getName() {
@@ -49,6 +50,30 @@ public class Employee {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public String[] getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(String[] languages) {
+        this.languages = languages;
+    }
+
+    public String getLoyaltyProgram() {
+        return loyaltyProgram;
+    }
+
+    public void setLoyaltyProgram(String loyaltyProgram) {
+        this.loyaltyProgram = loyaltyProgram;
+    }
+
+    public Map<String, String> getLanguageList() {
+        return languageList;
+    }
+
+    public void setLanguageList(Map<String, String> languageList) {
+        this.languageList = languageList;
     }
 
     @Override
